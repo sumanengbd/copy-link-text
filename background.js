@@ -1,8 +1,6 @@
 'use strict';
 
-chrome.runtime.onInstalled.addListener(() => {
-    // Placeholder for dynamic menu creation
-});
+chrome.runtime.onInstalled.addListener(() => {});
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === 'updateContextMenu') {
@@ -19,12 +17,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
 });
 
-// Listen for context menu item clicks
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === 'copyLinkText') {
         chrome.tabs.sendMessage(tab.id, 'copy', { frameId: info.frameId }, response => {
             if (response && response.copiedText) {
-                // Check the notification setting before showing a notification
                 chrome.storage.sync.get(['notificationsEnabled'], (result) => {
                     const notificationsEnabled = result.notificationsEnabled !== undefined ? result.notificationsEnabled : true;
 
@@ -34,12 +30,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
                             iconUrl: 'images/icon-48x48.png',
                             title: 'Copy Link Text',
                             message: `Copied: "${response.copiedText}"`,
-                            silent: true // Optional: Makes the notification silent
+                            silent: true
                         });
                     }
                 });
             } else {
-                // Check the notification setting before showing a notification
                 chrome.storage.sync.get(['notificationsEnabled'], (result) => {
                     const notificationsEnabled = result.notificationsEnabled !== undefined ? result.notificationsEnabled : true;
 
