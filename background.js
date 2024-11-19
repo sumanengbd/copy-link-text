@@ -5,11 +5,13 @@ chrome.runtime.onInstalled.addListener(() => {});
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === 'updateContextMenu') {
         if (message.showMenu) {
-            chrome.contextMenus.create({
-                id: "copyLinkText",
-                title: "Copy Link Text",
-                contexts: ["all"],
-                documentUrlPatterns: ["<all_urls>"]
+            chrome.contextMenus.removeAll(() => {
+                chrome.contextMenus.create({
+                    id: "copyLinkText",
+                    title: "Copy Link Text",
+                    contexts: ["all"],
+                    documentUrlPatterns: ["<all_urls>"]
+                });
             });
         } else {
             chrome.contextMenus.removeAll();

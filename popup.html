@@ -8,7 +8,7 @@
   	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="container">
+	<div class="copy-link-text">
 		<div class="tab-nav">
             <button class="tab-button active" id="tab-basic">Basic</button>
             <button class="tab-button" id="tab-options">Options</button>
@@ -56,14 +56,18 @@
         	<div class="text">
         		<h2 class="title">Options</h2>
 
-        		<div class="form-group">
-        			<label for="notification-switch">Enable Notifications</label>
-        			<input type="checkbox" id="notification-switch" />
-        		</div>
+                <div class="form-group">
+                    <label for="notification-switch" class="checkbox-switch">Enable Notifications:</label>
+                    <input type="checkbox" id="notification-switch" checked>
+                </div>
 
-        		<div class="description">			
-        			<p>Toggle this to enable or disable notifications when you copy the link text.</p>
-        		</div>
+                <div class="form-group">
+                    <h3 class="title">Select Mode</h3>
+                    <label for="enable-link-button" class="radio-switch">Enable Link and Button:</label>
+                    <input type="radio" name="mode" id="enable-link-button" checked>
+                    <label for="enable-anywhere" class="radio-switch">Enable Anywhere:</label>
+                    <input type="radio" name="mode" id="enable-anywhere">
+                </div>
         	</div>
         </div>
 	</div>

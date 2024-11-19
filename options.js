@@ -19,13 +19,26 @@ function showTab(tab) {
 }
 
 if (typeof chrome !== 'undefined' && chrome.storage) {
-    chrome.storage.sync.get(['notificationsEnabled'], (result) => {
+    chrome.storage.sync.get(['notificationsEnabled', 'mode'], (result) => {
         const notificationsEnabled = result.notificationsEnabled !== undefined ? result.notificationsEnabled : true;
+        const mode = result.mode || 'link-button';
         document.getElementById('notification-switch').checked = notificationsEnabled;
+        document.getElementById(`enable-${mode}`).checked = true;
+
+        if (!result.mode) {
+            chrome.storage.sync.set({ mode: 'link-button' });
+        }
     });
 
     document.getElementById('notification-switch').addEventListener('change', (event) => {
         chrome.storage.sync.set({ notificationsEnabled: event.target.checked });
+    });
+
+    document.querySelectorAll('input[name="mode"]').forEach((radio) => {
+        radio.addEventListener('change', (event) => {
+            const selectedMode = event.target.id.replace('enable-', '');
+            chrome.storage.sync.set({ mode: selectedMode });
+        });
     });
 } else {
     console.error('chrome.storage.sync is not available.');

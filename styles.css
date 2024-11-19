@@ -3,22 +3,21 @@ body {
 	padding: 0;
 }
 
-label {
-	font-size: 16px;
-}
-
-.container {
+.copy-link-text {
 	min-width: 250px;
 }
 
-/* Tab Styles */
-.tab-nav {
+.copy-link-text .tab-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #F0F0F0;
 }
 
-.tab-button {
+.copy-link-text .tab-button {
 	width: 100%;
 	color: #000;
 	border: none;
@@ -29,101 +28,140 @@ label {
 	position: relative;
 	padding: 10.5px 20px;
 	background: transparent;
+	-webkit-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
 	transition: color 0.3s ease;
 }
 
-.tab-button::after {
+.copy-link-text .tab-button::after {
     width: 0;
     left: 50%;
     content: "";
     height: 3px;
     bottom: -1px;
     position: absolute;
+    background: #007AFF;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    background: linear-gradient(45deg, #b84de5, #7d41ff);
 }
 
-.tab-button.active, .tab-button:hover {
-    color: #b84de5;
+.copy-link-text .tab-button.active, 
+.copy-link-text .tab-button:hover {
+    color: #007AFF;
 }
 
-.tab-button.active:after {
+.copy-link-text .tab-button.active:after {
     left: 0;
     width: 100%;
 }
 
-.tab-content {
+.copy-link-text .tab-content {
     padding: 20px 15px;
 }
 
-.tab-content.active {
+.copy-link-text .tab-content.active {
     display: block;
 }
 
-.logo {
+.copy-link-text .logo {
 	margin-bottom: 10px;
 }
 
-.text .title {
+.copy-link-text .text .title {
 	margin-top: 0;
   	font-size: 18px;
   	margin-bottom: 5px;
 }
 
-.text .description {
+.copy-link-text .text .description {
 	font-size: 14px;
 }
 
-.text .description p {
+.copy-link-text .text .description p {
 	margin: 0;
 }
 
-.social {
+.copy-link-text label {
+	font-size: 16px;
+}
+
+.copy-link-text .form-group {
+	margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.copy-link-text .form-group:last-child {
+	margin-bottom: 0;
+}
+
+.copy-link-text .social {
 	margin-top: 15px;
 }
 
-.social ul {
+.copy-link-text .social ul {
 	padding: 0;
 	margin: 0 -3px;
 	list-style: none;
 }
 
-.social ul li {
+.copy-link-text .social ul li {
     padding-left: 3px;
     padding-right: 3px;
 	display: inline-block;
 }
 
-.social ul li a {
+.copy-link-text .social ul li a {
 	width: 30px;
 	height: 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	background: #000000;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	border-radius: 500px;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
-.social ul li a img {
+.copy-link-text .social ul li a img {
 	height: auto;
 	max-width: 18px;
+	-webkit-filter: brightness(0) invert(1);
 	filter: brightness(0) invert(1);
 }
 
-.social ul li.facebook a img {
+.copy-link-text .social ul li.facebook a img {
 	max-width:  16px;
 }
 
-.social ul li.facebook a {
+.copy-link-text .social ul li.facebook a {
 	background: #246BF1;
 }
 
-.social ul li.linkedin a {
+.copy-link-text .social ul li.linkedin a {
 	background: #1A5ABB;
 }
 
-.social ul li a:hover {
+.copy-link-text .social ul li a:hover {
 	opacity: 0.9;
+	-webkit-transform: translateY(-5px);
+	-ms-transform: translateY(-5px);
 	transform: translateY(-5px);
 }
