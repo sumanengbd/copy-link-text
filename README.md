@@ -1,5 +1,3 @@
-Here’s the `README.md` file code for your project:
-
 # Copy Link Text Chrome Extension
 
 The **Copy Link Text** Chrome extension allows users to quickly copy the text content of any link (`<a>` tag) or button (`<button>` tag) to the clipboard via a right-click context menu. It also provides optional notifications to confirm successful copying.
