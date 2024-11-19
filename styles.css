@@ -1,0 +1,129 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+label {
+	font-size: 16px;
+}
+
+.container {
+	min-width: 250px;
+}
+
+/* Tab Styles */
+.tab-nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tab-button {
+	width: 100%;
+	color: #000;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	position: relative;
+	padding: 10.5px 20px;
+	background: transparent;
+	transition: color 0.3s ease;
+}
+
+.tab-button::after {
+    width: 0;
+    left: 50%;
+    content: "";
+    height: 3px;
+    bottom: -1px;
+    position: absolute;
+    transition: all 0.4s ease;
+    background: linear-gradient(45deg, #b84de5, #7d41ff);
+}
+
+.tab-button.active, .tab-button:hover {
+    color: #b84de5;
+}
+
+.tab-button.active:after {
+    left: 0;
+    width: 100%;
+}
+
+.tab-content {
+    padding: 20px 15px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.logo {
+	margin-bottom: 10px;
+}
+
+.text .title {
+	margin-top: 0;
+  	font-size: 18px;
+  	margin-bottom: 5px;
+}
+
+.text .description {
+	font-size: 14px;
+}
+
+.text .description p {
+	margin: 0;
+}
+
+.social {
+	margin-top: 15px;
+}
+
+.social ul {
+	padding: 0;
+	margin: 0 -3px;
+	list-style: none;
+}
+
+.social ul li {
+    padding-left: 3px;
+    padding-right: 3px;
+	display: inline-block;
+}
+
+.social ul li a {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	background: #000000;
+	align-items: center;
+	border-radius: 500px;
+	justify-content: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.social ul li a img {
+	height: auto;
+	max-width: 18px;
+	filter: brightness(0) invert(1);
+}
+
+.social ul li.facebook a img {
+	max-width:  16px;
+}
+
+.social ul li.facebook a {
+	background: #246BF1;
+}
+
+.social ul li.linkedin a {
+	background: #1A5ABB;
+}
+
+.social ul li a:hover {
+	opacity: 0.9;
+	transform: translateY(-5px);
+}
