@@ -35,8 +35,9 @@ The **Copy Link Text** Chrome extension allows users to quickly copy the text co
 ![Notification](https://github.com/user-attachments/assets/29475ff9-711a-4c20-b787-525e86357b65)
 
 ### Options
-![Basic](https://github.com/user-attachments/assets/2dd30173-7988-472f-a2c5-8def1a99f960)
-![Options](https://github.com/user-attachments/assets/581d7f6a-8b41-4712-8cda-20725a5b8ade)
+![Basic](https://github.com/user-attachments/assets/8837b71b-83b6-48d0-b079-925298b8f8c6)
+![Options](https://github.com/user-attachments/assets/beac9409-ea2d-419e-9ecf-7ab145e3c033)
+
 
 ## Usage
 
