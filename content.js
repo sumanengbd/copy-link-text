@@ -5,7 +5,7 @@ document.addEventListener('contextmenu', event => {
     let isLinkOrButton = false;
 
     for (const node of eventPath) {
-        if (node.nodeName && (node.nodeName.toLowerCase() === 'a' || node.nodeName.toLowerCase() === 'button')) {
+        if (node.nodeName) {
             copyTextLastTarget = node;
             isLinkOrButton = true;
             break;
