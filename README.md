@@ -80,6 +80,13 @@ To toggle notifications:
 1. Open the extension settings (to be implemented in a future version).
 2. Enable or disable the notification preference.
 
+### Select Mod
+Choose the context where the "Copy Link Text" option should appear:
+1. **Link/Button**: The context menu will only appear when right-clicking on links (`<a>` tags) or buttons (`<button>` tags).
+2. **Anywhere**: The context menu will appear when right-clicking anywhere on the page, whether on a link, button, or other elements.
+
+The **Select Mode** option will be available in the extension's settings, allowing users to choose between these two modes.
+
 ## Future Improvements
 
 - Add an options page for user preferences (e.g., enabling/disabling notifications).
